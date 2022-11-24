@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
+    <meta name="author" content="Mehran Ullah">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="Tutoring Park" /> <!-- website name -->
+    <meta property="og:site" content="Tutoringpark.com" /> <!-- website link -->
+    <meta property="og:title" content="Tutoring" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Tutoring Park Payment</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="../images/icons/icon_2.ico">
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 4px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+
+
+        #id-paypal {
+            display: block;
+            height: 4rem;
+
+        }
+
+        #id-card {
+            display: none;
+            height: 4rem;
+        }
+
+        .tab-button {
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: #ffffff;
+            border: none;
+            color: grey;
+            padding: 4px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 3px;
+        }
+
+        .tab-button-active {
+            background-color: rgb(58, 95, 218);
+            color: rgb(255, 255, 255);
+            box-shadow: #49484871 1px 2px 4px 2px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+    <%- include("../navigationBar",{courses:courses})%>
+
+        <header id="header" class="ex-2-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>BUY Plan</h1>
+                        <p>Fill the Form correctly, we will notify you on email</p>
+                        <!-- Sign Up Form -->
+                        <div class="form-container">
+                            <form data-toggle="validator" id="form" action="login-pay-paypal" method="POST">
+                                <div class="form-group text-left">
+                                    <label class="form-label" for="username">User Name*</label>
+                                    <input type="username" class="form-control-input" id="username" name="username" required>
+
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group text-left">
+                                    <label class="form-label" for="password">Password*</label>
+                                    <input type="password" class="form-control-input" id="password" name="password" required>
+
+                                    <div class="help-block with-errors"></div>
+                                </div>
+
+                                
+
+
+                                <div class="form-group text-left">
+                                    <label class="form-label" for="course">Course*</label>
+                                    <select class="form-control-select" id="id-course" name="course">
+                                        <option> --- </option>
+                                        <% for(course of courses){ %>
+                                            <option value='{"small":{"h":"<%= course.small+course.small_bonus %>","p":"<%=course.price* (course.small+course.small_bonus )%>"},
+                                                    "medium":{"h":"<%= course.medium+course.medium_bonus %>","p":" <%=course.price* (course.medium+course.medium_bonus) %>"},
+                                                    "full":{"h":"<%= course.full+course.full_bonus %>","p":"<%=course.price* (course.full+course.full_bonus) %>"},
+                                                "id":"<%= course.id%>",
+                                                "abbreviation":"<%= course.abbreviation%>",
+                                                "name":"<%= course.name%>"
+                                            }'>
+                                                <%= course.abbreviation %>
+                                            </option>
+                                            <% } %>
+
+                                    </select>
+                                </div>
+
+
+
+
+                                <h5>COURSE PLANS</h5>
+                                <table>
+                                    <tr>
+                                        <th>PLAN</th>
+                                        <th>HOURS</th>
+                                        <th>PRICE</th>
+                                    </tr>
+                                    <tr>
+                                        <td id="s-plan"> SMALL </td>
+                                        <td id="s-hours"> - </td>
+                                        <td id="s-price"> - </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="m-plan"> MEDIUM </td>
+                                        <td id="m-hours"> - </td>
+                                        <td id="m-price"> - </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="f-plan"> FULL </td>
+                                        <td id="f-hours"> - </td>
+                                        <td id="f-price"> - </td>
+                                    </tr>
+
+                                </table>
+                                <div class="form-group text-left">
+                                    <label class="form-label" for="plan">Plan*</label>
+                                    <select class="form-control-select" id="id-plan" name="plan">
+                                        <option> --- </option>
+
+
+                                    </select>
+                                </div>
+                                <div class="form-group text-left">
+                                    <strong>Payment Method: </strong><br>
+                                    <input type="button" class="tab-button tab-button-active" id="paypal"
+                                        name="payment_method" value="Paypal">
+
+                                    <input type="button" class="tab-button" id="card" name="payment_method"
+                                        value="Card">
+                                    <input type="text" id="method" name="method" value="paypal" hidden>
+                                </div>
+
+
+
+                              
+
+
+                                <div id="card-errors" role="alert"> <%= message%> </div>
+
+
+                                <div id="id-card"> <img src="../../images/icons/pay_by_cards.webp"
+                                        class="credit-card-logo"></div>
+                                <div id="id-paypal"><img src="../../images/icons/paypal.png" class="credit-card-logo"
+                                        style="height: 4rem;"></div>
+                                        <div id="paymentCard">
+                                        
+                                </div>
+                                <div style="height:5rem ;"></div>
+                               <div class="form-group"> <input type="text" value="plan" name="methodType" hidden></div>
+                                <div class="form-group">
+
+                                    <button type="submit" class="form-control-submit-button">Submit</button>
+
+
+                                </div>
+                                <div class="form-message">
+                                    <!-- Alert Message -->
+                                </div>
+                            </form>
+                        </div> <!-- end of form container -->
+                        <!-- end of sign up form -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+
+            </div> <!-- end of container -->
+            <div style="height:10rem ;"></div>
+        </header> <!-- end of ex-header -->
+        <!-- end of header -->
+
+        <script>
+            var sh = document.getElementById('s-hours');
+            var spr = document.getElementById('s-price');
+
+            var mh = document.getElementById('m-hours');
+            var mpr = document.getElementById('m-price');
+
+            var fh = document.getElementById('f-hours');
+            var fpl = document.getElementById('f-price');
+
+
+            var planSelect = document.getElementById('id-plan');
+            var selectEl = document.getElementById('id-course');
+
+
+            
+
+
+
+
+
+
+            selectEl.addEventListener('change', function () {
+                let current = JSON.parse(this.value);
+
+                sh.innerHTML = current.small.h;
+                spr.innerHTML = current.small.p;
+
+                mh.innerHTML = current.medium.h;
+                mpr.innerHTML = current.medium.p;
+
+                fh.innerHTML = current.full.h;
+                fpl.innerHTML = current.full.p;
+
+                var plans = ['SMALL', 'MEDIUM', 'FULL'];
+                var prices = [spr.textContent, mpr.textContent, fpl.textContent];
+                var hours = [sh.textContent, mh.textContent, fh.textContent];
+                removeAll(planSelect);
+                planSelector(prices, plans,hours, planSelect);
+
+
+            });
+            // Put new options in Select Tag
+            function planSelector(prices, plans,hours, selectBox) {
+                for (var i = 0; i < 3; i++) {
+                    var option = document.createElement('option');
+                    option.value = `{"plan":"${plans[i]}","price":"${prices[i]}","hours":"${hours[i]}" }`;
+                    option.innerHTML = `<Strong>${plans[i]}</Strong>    |    ${prices[i]}$`;
+
+                    selectBox.appendChild(option);
+                }
+            }
+
+            //Remove all old options in a Select Tag except first Tag
+            function removeAll(selectBox) {
+                while (selectBox.options.length > 1) {
+                    selectBox.remove(1);
+                }
+            }
+
+
+        </script>
+        <!-- Scripts -->
+        <script src="https://js.stripe.com/v3/"></script>
+        <script src="../../js/card.js"></script>
+        <script src="../../js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+        <script src="../../js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+        <script src="../../js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+        <script src="../../js/jquery.easing.min.js"></script>
+        <!-- jQuery Easing for smooth scrolling between anchors -->
+        <script src="../../js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+        <script src="../../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+        <script src="../../js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+        <script src="../../js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+
+</html>

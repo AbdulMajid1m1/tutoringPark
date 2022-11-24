@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tutoring Park Payment | pay | Courses" />
+    <meta name="author" content="Mehran Ullah" />
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="Tutoring Park" />
+    <!-- website name -->
+    <meta property="og:site" content="tutoringpark.com" />
+    <!-- website link -->
+    <meta property="og:title" content="Tutoring" />
+    <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" />
+    <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" />
+    <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Payment Form | Tutoring Park | Courses</title>
+
+    <!-- Styles -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Cherry+Swash:wght@700&family=Fahkwang:wght@200&family=Marvel:wght@700&family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/fontawesome-all.css" rel="stylesheet" />
+    <link href="../css/swiper.css" rel="stylesheet" />
+    <link href="../css/magnific-popup.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <!-- Favicon  -->
+    <link rel="icon" href="../images/icons/new_logo_small.png" />
+    <style>
+      #id-paypal {
+        display: block;
+        height: 4rem;
+      }
+
+      #id-card {
+        display: none;
+        height: 4rem;
+      }
+
+      .tab-button {
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: #ffffff;
+        border: none;
+        color: grey;
+        padding: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 3px;
+      }
+
+      .tab-button-active {
+        background-color: #1da1f2;
+        color: rgb(255, 255, 255);
+        box-shadow: #49484871 1px 2px 4px 2px;
+      }
+      .payment-form-heading {
+        margin-top: 5rem;
+        color: #1da1f2;
+        margin-bottom: 50px;
+      }
+      @media only screen and (max-width: 850px) {
+        .payment-form-heading {
+        margin-top: 3rem;
+        margin-bottom: 30px;
+
+      }
+    }
+    </style>
+  </head>
+
+  <body data-spy="scroll" data-target=".fixed-top">
+    <%- include('../navigationBar',{courses:courses}) %>
+    <%-include("../TutorRegisterationForm")%>
+
+    <header id="header" class="ex-2-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="payment-form-heading homepage-heading">
+              Custom Payment Form
+            </h1>
+            <!-- <p>Pay for single session,</p> -->
+            <!-- Sign Up Form -->
+            <div class="form-container">
+              <form
+                data-toggle="validator"
+                id="form"
+                action="pay"
+                method="POST"
+              >
+                <div class="form-group text-left">
+                  <label class="form-label" for="sname">Name*</label>
+                  <input
+                    type="text"
+                    class="form-control-input"
+                    id="name"
+                    name="name"
+                    required
+                  />
+
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group text-left">
+                  <label class="form-label" for="semail">Email*</label>
+                  <input
+                    type="email"
+                    class="form-control-input"
+                    id="email"
+                    name="email"
+                    required
+                  />
+
+                  <div class="help-block with-errors"></div>
+                </div>
+
+                <!-- <div class="form-group text-left">
+                                    <label class="form-label" for="phone">WhatsApp Number*</label>
+                                    <input type="phoneNumber" class="form-control-input" id="phone" name="phone"
+                                        required>
+
+                                    <div class="help-block with-errors"></div>
+                                </div> -->
+
+                <!-- <div class="form-group text-left">
+                                    <label class="form-label" for="im">I am a _____*</label>
+                                    <select class="form-control-select" name="im">
+                                        <option>Parent/Guardian</option>
+                                        <option>Student</option>
+                                        <option>Tutor</option>
+                                        <option>Independent Educational Consultant</option>
+                                        <option>School Counselor</option>
+                                        <option>Other</option>
+
+                                    </select>
+                                </div> -->
+
+                <!-- <div class="form-group text-left">
+                                    <label class="form-label" for="im">Country*</label>
+                                    <div>
+                                        <select  id="country" name="country" style="width:100% ; padding: 1rem !important;" >
+                                            <option>---</option>
+                                            
+    
+                                        </select>
+                                    </div>
+                                   
+                                </div> -->
+
+                <!-- <div class="form-group text-left">
+                                    <div id="aaa"></div>
+                                    <label class="form-label" for="city">City*</label>
+                                    <input type="city" class="form-control-input" id="city" name="city" required>
+                                </div> -->
+
+                <!-- <div class="form-group text-left">
+                                    <label class="form-label" for="phone">Whatsapp*</label>
+                                    <table  style="width: 100%;" ><tr><td style="width:30%; ">
+                                        <select  style="min-width: 140px;" id="code" name="code">
+                                            <option>---</option>
+                                           
+        
+                                        </select>
+                                    </td><td style="width:70%;"  >                                <input type="phone" class="form-control-input"  id="phone" name="phone" required>
+                                    </td></tr></table>
+                                   
+
+                                </div> -->
+
+                <div class="form-group text-left">
+                  <label class="form-label" for="amount">Amount in USD*</label>
+                  <input
+                    type="number"
+                    class="form-control-input"
+                    id="id-amount"
+                    name="amount"
+                    required
+                  />
+
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group text-left">
+                  <input
+                    type="text"
+                    class="form-control-input"
+                    value="paypal"
+                    id="id-method"
+                    name="method"
+                    required
+                    hidden
+                  />
+                </div>
+
+                <div class="form-group text-left">
+                  <strong>Payment Method: </strong><br />
+                  <input
+                    type="button"
+                    class="tab-button tab-button-active"
+                    id="paypal"
+                    name="payment_method"
+                    value="Paypal"
+                  />
+
+                  <input
+                    type="button"
+                    class="tab-button"
+                    id="card"
+                    name="payment_method"
+                    value="card"
+                  />
+                </div>
+                <div id="id-card">
+                  <img
+                    src="../images/icons/pay_by_cards.webp"
+                    class="credit-card-logo"
+                  />
+                </div>
+                <div id="id-paypal">
+                  <img
+                    src="../images/icons/paypal.png"
+                    class="credit-card-logo"
+                    style="height: 4rem"
+                  />
+                </div>
+                <div class="form-group">
+                  <input type="text" name="methodType" value="custom" hidden />
+                </div>
+
+                <div class="form-group text-left">
+                  <div id="paymentCard"></div>
+                </div>
+
+                <div id="card-errors" role="alert"></div>
+
+                <div class="form-group">
+                  <button
+                    type="submit"
+                    class="form-control-submit-button"
+                    style="bottom: -44px"
+                  >
+                    BUY
+                  </button>
+                  <!-- <input type="submit" value="NEXT" class="form-control-submit-button"> -->
+                </div>
+                <div class="form-message">
+                  <!-- Alert Message -->
+                </div>
+              </form>
+            </div>
+            <!-- end of form container -->
+            <!-- end of sign up form -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+      <div style="height: 10rem"></div>
+    </header>
+    <!-- end of ex-header -->
+    <!-- end of header -->
+
+    <!-- <script src="../js/countries.js"></script>
+        <script>
+
+            // $("#country").select2({ width:'100%',});
+            // $("#code").select2({ width:'100%',});
+
+          </script> -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="../js/card.js"></script>
+
+    <!-- Scripts -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Popper tooltip library for Bootstrap -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Bootstrap framework -->
+    <script src="../js/jquery.easing.min.js"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="../js/swiper.min.js"></script>
+    <!-- Swiper for image and text sliders -->
+    <script src="../js/jquery.magnific-popup.js"></script>
+    <!-- Magnific Popup for lightboxes -->
+    <script src="../js/validator.min.js"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="../js/scripts.js"></script>
+    <!-- Custom scripts -->
+  </body>
+</html>

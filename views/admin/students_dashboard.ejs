@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Tutoringpark">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Tutoring Park - The course descriptions</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/fontawesome-all.css" rel="stylesheet">
+    <link href="../css/swiper.css" rel="stylesheet">
+    <link href="../css/magnific-popup.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/admin.css" rel="stylesheet">
+    <!-- Favicon  -->
+    <link rel="icon" href="../images/icons/icon_2.ico">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+    <!-- <div class="spinner-wrapper">
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div> -->
+    <!-- end of preloader -->
+
+
+
+
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-xl-6">
+                        <div class="text-container">
+                            <h1>Developer MEHRAN ULLAH From METRA IT</h1>
+                            <p class="p-large">+923219195952</p>
+                            <a class="btn-solid-lg page-scroll" href="/">Logout</a>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-5 col-xl-6 ">
+                        <div class="form-group text-left">
+                            <label class="form-label" for="plan">My Courses*</label>
+                            <select class="form-control-select" id="id-course" name="course">
+                               
+                                <option> --- </option>
+                                <%for(course of data.courses){%>
+                                <option value="<%=course%>"> <%=course.abbreviation%> </option>
+                                <%}%>
+                            </select>
+                        </div>
+
+                        <!-- Card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Details</h3>
+                                <div class="divider"></div>
+                                <ul class="list-unstyled li-space-lg">
+                                    <li ><strong> Plan: </strong><div id="plan">small</div> </li>
+                                    <li ><strong> Left: </strong> <div id="left">12Hours</div></li>
+                                    <li><strong> Total: </strong> <div id="total">30Hours</div></li>
+
+                                    <div class="divider"></div>
+<script>
+
+    var selectCourse=element.getElementById("id-course");
+selectCourse.addEventListener('change',function(){
+    element.getElementById("plan").s
+});
+
+</script>
+
+
+
+
+                                    <li>
+
+                                        <div class="button-wrapper">
+                                            <a class="btn-solid-reg page-scroll" href="/custom-register">Buy Hours</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+
+                                        <div class="button-wrapper">
+                                            <a class="btn-solid-reg page-scroll" href="/register">Buy plan</a>
+                                        </div>
+                                    </li>
+
+
+
+
+                                </ul>
+                                <!-- <div class="button-wrapper">
+                                        <a class="btn-solid-reg page-scroll" href="/register">BUY</a>
+                                    </div> -->
+                            </div>
+                        </div> <!-- end of card -->
+
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+
+
+
+    <svg class="header-frame" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+        viewBox="0 0 1920 310">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: #5f4def;
+                }
+            </style>
+        </defs>
+        <title>header-frame</title>
+        <path class="cls-1"
+            d="M0,283.054c22.75,12.98,53.1,15.2,70.635,14.808,92.115-2.077,238.3-79.9,354.895-79.938,59.97-.019,106.17,18.059,141.58,34,47.778,21.511,47.778,21.511,90,38.938,28.418,11.731,85.344,26.169,152.992,17.971,68.127-8.255,115.933-34.963,166.492-67.393,37.467-24.032,148.6-112.008,171.753-127.963,27.951-19.26,87.771-81.155,180.71-89.341,72.016-6.343,105.479,12.388,157.434,35.467,69.73,30.976,168.93,92.28,256.514,89.405,100.992-3.315,140.276-41.7,177-64.9V0.24H0V283.054Z" />
+    </svg>
+    <!-- end of header -->
+
+
+
+
+    <!-- Pricing -->
+    <div id="pricing" class="cards-2" style="	box-shadow: rgba(49, 48, 48, 0.35) 0px 5px 4px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <div class="above-heading">Assignments</div> -->
+                    <h2 class="h2-heading">Assignments</h2>
+
+                    <ul class="pricing-ul">
+                        <li class="list-li">
+                            <div class="list-title"><strong>1. </strong>If the first three Fibonacci numbers are givenas x1= 1, x2= 1 and x3= 2, then what is theleast value of n for which xn> 500?</div>
+                            <div class="divider"></div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="list-badge">completed</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="list-score">Score: 90% </div>
+                                </div>
+                                <div class="col-md-4"><small>20-4-2023 19:44:00</small></div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+
+
+          
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of pricing -->
+
+
+    <!-- Pricing -->
+    <div id="pricing" class="cards-2" style="	box-shadow: rgba(49, 48, 48, 0.35) 0px 5px 4px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <div class="above-heading">Assignments</div> -->
+                    <h2 class="h2-heading">Tests</h2>
+
+                    <ul class="pricing-ul">
+                        <li class="list-li">
+                            <div class="list-title"><strong>1. </strong>How do you choose the Scaling method used for Neural Networks?</div>
+                            <div class="divider"></div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="list-badge">completed</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="list-score">Score: 60% </div>
+                                </div>
+                                <div class="col-md-4"><small>20-4-2023 19:44:00</small></div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+
+
+          
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of pricing -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div style="height:10rem ;"></div>
+
+    <div id="message">
+
+    </div>
+
+
+    <!-- Empty Space -->
+    <div style="height:10rem ;"></div>
+    <!-- Empty Space End-->
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="../js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="../js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="../js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="../js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="../js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="../js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="../js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+
+</html>

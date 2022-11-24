@@ -1,0 +1,93 @@
+<div
+  class="modal fade"
+  id="form"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <h5 class="modal-title" id="exampleModalLabel">
+          JOIN TUTORING PARK AS A TUTOR
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span class="modal-cross" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="tutor-register" method="POST" enctype="multipart/form-data">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              id="fname"
+              name="fname"
+              aria-describedby="emailHelp"
+              placeholder="Enter last name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input
+              required
+              type="text"
+              class="form-control"
+              id="lname"
+              name="lname"
+              aria-describedby="emailHelp"
+              placeholder="Enter first name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email1">Email</label>
+            <input
+              required
+              type="email"
+              class="form-control"
+              id="email1"
+              name="email1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              name="phone"
+              placeholder="Phone Number"
+            />
+          </div>
+          <div class="form-group custom-file-button">
+            <label for="file">Submit Your Cv</label>
+            <input
+              type="file"
+              class="form-control"
+              id="file"
+              name="file"
+              required
+              accept="application/pdf"
+            />
+          </div>
+        </div>
+        <div class="modal-footer border-top-0 d-flex justify-content-center">
+          <button type="submit" class="btn btn-success modal-register-btn">
+            Register Now
+          </button>
+        
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

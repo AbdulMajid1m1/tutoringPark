@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Tutoring Park | Online Tutoring</title>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Data-Driven Online tutoring and test prep | Tutoring Park | School is changing. Tests are changing. The way students learn is
+    changing. Conquer these changes quickly and confidently using innovative, private
+    online tutoring."
+    />
+    <meta
+      name="google-site-verification"
+      content="7xbbiuNqfSClNjHlY-hiK5DXW1LKcD5Ngqb6nRSZvPI"
+    />
+    <meta
+      name="keywords"
+      content="Tutoringpark,
+parktutoring,
+Tutoring Park,
+park tutoring,
+tutors,
+online tutors,
+tutoringpark.com,
+Tutoring,
+Online tutoring,
+Free tutoring,
+Tutoring for free,
+Tutoring jobs,
+In home tutoring,
+Home tutoring,
+Tutoring at home,
+At home tutoring,
+Private tutoring,
+Tutoring job,
+Tutoring classes,
+Free tutoring online,
+Online free tutoring,
+Online tutoring free,
+On line tutoring,
+Tutoring on line,
+University tutoring,
+School tutoring,
+Tutoring school,
+Tutoring center,
+The tutoring center,
+Tutoring centers,
+Tutoring help,
+Tutoring services,
+College tutoring,
+Tutoring program,
+Tutoring service,
+Online tutoring jobs,
+Tutoring jobs online,
+Tutoring online jobs,
+Tutoring programs,
+Tutoring business,
+Online tutoring job,
+Tutoring company,
+Tutoring school,
+Tutoring agencies,
+High school tutoring,
+Child tutoring,
+Tutoring website,
+Tutoring online for free,
+tutoring for free online,
+tutoring free online,
+tutoring online for free for kids,
+tutoring online for kids,
+tutoring online for math,
+tutoring online jobs for college students,
+tutoring online jobs for school students,
+tutoring online jobs for english,World Class Tutors , Why choose Tutoring Park, Online Tutoring , Exceptional Services , Free Sessions , Offers, Tutoring park, free online tutors, Tutoring services, IB Curriculam, CBSE, IGCSE, GCSE, SABIS, AP, International Baccalaureate (IB) / IB Curriculum,  "
+    />
+    <meta name="author" content="Tutoring Park" />
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="Tutoring Park" />
+    <!-- website name -->
+    <meta property="og:site" content="tutoringpark.com" />
+    <!-- website link -->
+    <meta property="og:title" content="The Online Tutoring Service" />
+    <!-- title shown in the actual shared post -->
+    <meta
+      property="og:description"
+      content="School is changing. Tests are changing. The way students learn is
+    changing. Conquer these changes quickly and confidently using innovative, private and online tutoring for British, American  and IB Curriculam."
+    />
+    <!-- description shown in the actual shared post -->
+    <meta
+      property="og:image"
+      content="https://tutoringpark.com/images/icon/new_logo.png"
+    />
+    <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="*" />
+    <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Styles -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Cherry+Swash:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/fontawesome-all.css" rel="stylesheet" />
+    <!-- <link href="css/swiper.css" rel="stylesheet" /> -->
+    <link href="css/magnific-popup.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css"
+    />
+
+    <!-- Favicon  -->
+    <link rel="icon" href="images/icons/new_logo_small.png" />
+  </head>
+
+  <body data-spy="scroll" data-target=".fixed-top">
+    <%- include('partials/splash') %> <%-
+    include('partials/navigationBar',{courses:courses}) %> <%-
+    include('partials/header') %>
+
+    <div style="height: 20rem" class="empty-div"></div>
+
+    <%- include("partials/tutoringServices")%>
+
+    <!-- Courses -->
+    <div id="courses"><%- include("partials/courses",{courses:courses})%></div>
+
+    <!-- end of cards-1 -->
+    <!-- end of Courses -->
+    <%- include("partials/tutoringParkAbout")%> <%-
+    include("partials/one_on_one")%>
+
+    <div style="height: 10rem"></div>
+
+    <!-- Description -->
+    <%- include("partials/description")%>
+    <!-- end of cards-1 -->
+    <!-- end of description -->
+
+    <div id="message" class="tabs">
+      <%- include("partials/contactUs",{messages:contact}) %>
+    </div>
+
+    <%- include("partials/tutorTestimonials")%> <%-
+    include("partials/TutorRegisterationForm")%>
+    <!-- Subscribe -->
+    <div id="subscribtion"><%- include("partials/subscribtion")%></div>
+    <%- include("widgets/whatsapp")%>
+    <!-- Subscribe  END-->
+
+    <!-- Footer -->
+    <%- include("partials/footer")%>
+
+    <!-- Scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script>
+    <script>
+      //  Code By Webdevtrick ( https://webdevtrick.com )
+      jQuery(document).ready(function ($) {
+        "use strict";
+        $("#testimonials-list").owlCarousel({
+          loop: true,
+          center: true,
+          items: 3,
+          nav: true,
+
+          navText: [
+            "<img src='../images/icons/arrowIcon.png' class='arrow-img'>",
+            "<img src='../images/icons/arrowIcon.png' class='arrow-img arrow-img-next'>",
+          ],
+          margin: 0,
+          autoplay: true,
+          lazyLoad: true,
+          autoplayTimeout: 8500,
+          smartSpeed: 450,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            768: {
+              items: 2,
+              nav: false,
+            },
+            1170: {
+              items: 3,
+            },
+          },
+        });
+      });
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script>
+    <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <!-- <script src="js/swiper.min.js"></script> -->
+    <!-- Swiper for image and text sliders -->
+    <!-- <script src="js/jquery.magnific-popup.js"></script> -->
+    <!-- Magnific Popup for lightboxes -->
+    <script src="js/validator.min.js"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script>
+
+    <script>
+      var firstDiv = document.getElementById("first-service-div");
+      var image = document.getElementById("first-icon");
+      firstDiv.addEventListener("mouseover", function () {
+        image.src = "../images/icons/white.png";
+      });
+      firstDiv.addEventListener("mouseout", function () {
+        image.src = "../images/icons/service-icon1.png";
+      });
+      var secondDiv = document.getElementById("second-service-div");
+      var image2 = document.getElementById("second-icon");
+      secondDiv.addEventListener("mouseover", function () {
+        image2.src = "../images/icons/testt.png";
+      });
+      secondDiv.addEventListener("mouseout", function () {
+        image2.src = "../images/icons/tests.png";
+      });
+      var thirdDiv = document.getElementById("third-service-div");
+      var image3 = document.getElementById("third-icon");
+      thirdDiv.addEventListener("mouseover", function () {
+        image3.src = "../images/icons/nn.png";
+      });
+      thirdDiv.addEventListener("mouseout", function () {
+        image3.src = "../images/icons/languages.png";
+      });
+      var fourthDiv = document.getElementById("fourth-service-div");
+      var image4 = document.getElementById("fourth-icon");
+      fourthDiv.addEventListener("mouseover", function () {
+        image4.src = "../images/icons/bbb.png";
+      });
+      fourthDiv.addEventListener("mouseout", function () {
+        image4.src = "../images/icons/bookk.png";
+      });
+
+      var uploadField = document.getElementById("file");
+
+      uploadField.onchange = function () {
+        if (this.files[0].size > 2097152) {
+          alert("File Size should not be greater than 2mb");
+          this.value = "";
+        }
+      };
+    </script>
+    <!-- Custom scripts -->
+  </body>
+</html>

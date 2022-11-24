@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Tutoringpark">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="Qualified tutors" /> <!-- website name -->
+    <meta property="og:site" content="https://tutoringpark.com/tutors" /> <!-- website link -->
+    <meta property="og:title" content="Find a certified Tutor for HOME & ONIINE Tutoring" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="Find a certified Tutor for HOME & ONIINE Tutoring" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>Tutoring Park | Qualified tutors</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Cherry+Swash:wght@700&family=Fahkwang:wght@200&family=Marvel:wght@700&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Cherry+Swash:wght@700&display=swap" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/fontawesome-all.css" rel="stylesheet">
+    <link href="../css/swiper.css" rel="stylesheet">
+    <link href="../css/magnific-popup.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="../images/icons/new_logo_small.png">
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+
+       <!-- Preloader -->
+       <%-include('../partials/splash')%>
+       <!-- end of preloader -->
+
+
+    <!-- Navigation -->
+    <%- include('../partials/navigationBar',{courses:courses}) %>
+
+        <!-- end of navbar -->
+        <!-- end of navigation -->
+
+
+
+
+        <!-- Header -->
+        <header id="header" class="header" style="background:#1da1f2;">
+            <div class="header-content">
+                <div class="container">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-7 col-xl-7" >
+                            <div class="text-container text-center" >
+                                <h1 style="font-family: 'Cherry Swash', cursive;">
+                                  Qualified Tutors
+                                </h1>
+                                <p class="p-large">
+                                    Find a certified Tutor for HOME & ONIINE Tutoring
+                                </p>
+                                <a class="btn-solid-lg page-scroll" href="#message">Contact Us</a>
+                            </div> <!-- end of text-container -->
+                        </div> <!-- end of col -->
+                        <div class="col-lg-5 col-xl-5 ">
+                            <div class="image-container">
+                                
+                                  
+                                        <div  style="box-shadow: 4px 9px 15px rgba(51, 51, 51, 0.897); width: 100%;height: 15rem; background-repeat: no-repeat; background-position:center ; background-size: cover; border-radius: 1rem;  background-image: url('../images/imgs/img_ (5).png');" ></div>
+                                
+                            </div> 
+                        </div>
+                     
+                        <!-- end of col -->
+                    </div> <!-- end of row -->
+                </div> <!-- end of container -->
+            </div> <!-- end of header-content -->
+        </header> <!-- end of header -->
+<!-- Breadcrumbs -->
+<div class="ex-basic-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumbs">
+                    <a href="/">Home</a><i class="fa fa-angle-double-right"></i><span>tutors</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of breadcrumbs -->
+
+
+      
+
+
+    
+
+
+
+
+
+
+        <%- include("tutors",{tutors:tutors,})%>
+
+
+  
+
+
+
+
+
+                <div style="height:10rem ;"></div>
+
+                <div id="message">
+                    <%- include("../partials/contactUs",{messages:' '})%>
+                </div>
+<!-- Breadcrumbs -->
+<div class="ex-basic-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumbs">
+                    <a href="/">Home</a><i class="fa fa-angle-double-right"></i><span>tutors</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of breadcrumbs -->
+
+                <!-- Empty Space -->
+                <div style="height:10rem ;"></div>
+                <!-- Empty Space End-->
+
+
+
+
+                <%- include("../partials/footer") %>
+
+                    <!-- Scripts -->
+                    <script src="../js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+                    <script src="../js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+                    <script src="../js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+                    <script src="../js/jquery.easing.min.js"></script>
+                    <!-- jQuery Easing for smooth scrolling between anchors -->
+                    <script src="../js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+                    <script src="../js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+                    <script src="../js/validator.min.js"></script>
+                    <!-- Validator.js - Bootstrap plugin that validates forms -->
+                    <script src="../js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+
+</html>

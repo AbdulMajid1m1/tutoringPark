@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <!-- Add meta tags for mobile and IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> PayPal  | Tutoring Park</title>
+        <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/fontawesome-all.css" rel="stylesheet">
+    <link href="../../css/swiper.css" rel="stylesheet">
+    <link href="../../css/magnific-popup.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+       <link rel="icon" href="../images/icons/new_logo_small.png">
+</head>
+
+<body >
+<div class="basic-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+    <!-- Set up a container element for the button -->
+    <div  id="paypal-button-container"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Include the PayPal JavaScript SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AVCR4UCkbCsH06xE5aYbZBAE84BpGf57T5DD8fjOkxSGKNi9R05S7vfrfYtvMfmacayvs6d35MykTE8A&currency=USD"></script>
+
+    <script>
+     var name='<%= name %>';
+     var ammount='<%= amount %>';
+     var email='<%= email %>';
+        // Render the PayPal button into #paypal-button-container
+       
+        paypal.Buttons({
+           
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: ammount
+                        }
+                    }]
+                });
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(orderData) {
+                    // Successful capture! For demo purposes:
+                    // console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                    var transaction = orderData.purchase_units[0].payments.captures[0];
+                    // alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+                    // Replace the above to show a success message within this page, e.g.
+                    // const element = document.getElementById('paypal-button-container');
+                    // element.innerHTML = '';
+                    // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                    // Or go to another URL:
+                      actions.redirect(`https://tutoringpark.com/success/${email}/${name} Your Transaction to TutoringPark has  ${transaction.status}  Id : ${transaction.id}  Regards: www.tutoringpark.com `);
+                });
+            }
+
+
+        }).render('#paypal-button-container');
+    </script>
+</body>
+
+</html>
+    

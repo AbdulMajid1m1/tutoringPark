@@ -1,0 +1,76 @@
+<div id="feedbacks" style="background-color: #4646ca;">
+  <div  class="tabs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- <div class="above-heading">Descriptions</div> -->
+                <h2 class="h2-heading decoration-heading"> Testimonials </h2>
+                <!-- <p class="p-heading">Take your business strategy to the next level and automatize your marketing
+                    tasks to save time for product development. Tivo can provide results in less than 2 weeks
+                </p> -->
+                <div style="height: 5rem;"></div>
+
+            </div> <!-- end of col -->
+        </div>
+         <!-- end of row -->
+
+
+         <div class="slider-2">
+            <div class="container">
+               <!-- end of col -->
+          
+                <div class="row">
+                
+                    <div class="col-lg-12">
+        
+                        <!-- Text Slider -->
+                        <div class="slider-container">
+                            <div class="swiper-container text-slider">
+                                <div class="swiper-wrapper">
+        
+                                    <% for (test of testimonials){ %>
+                                        <!-- Slide -->
+                                        <div class="swiper-slide">
+                                            <div class="image-wrapper">
+        
+        
+                                                <img class="testimonails-img" src="images/testimonials/<%=test.imgUrl %>" />
+        
+                                            </div> <!-- end of image-wrapper -->
+                                            <div class="text-wrapper">
+                                                <div class="testimonial-text">
+                                                    <%= test.value %>
+                                                </div>
+                                                <div class="testimonial-author">
+                                                    <%= test.name %> <br><%= test.discription %>
+                                                </div>
+                                            </div> <!-- end of text-wrapper -->
+                                        </div> <!-- end of swiper-slide -->
+                                        <!-- end of slide -->
+        
+                                        <% } %>
+        
+                                </div> <!-- end of swiper-wrapper -->
+        
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <!-- end of add arrows -->
+        
+                            </div> <!-- end of swiper-container -->
+                        </div> <!-- end of slider-container -->
+                        <!-- end of text slider -->
+        
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div>
+     
+    </div> <!-- end of container -->
+</div> <!-- end of tabs -->
+<!-- end of features -->
+
+
+
+
+</div>

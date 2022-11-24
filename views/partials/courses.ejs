@@ -1,0 +1,17 @@
+<div class="tutoring-services-container">
+  <div class="services-wrapper">
+    <%-include("./TutorRegisterationForm")%>
+
+    <% var i=1; %> <% for(course of courses) { %>
+
+    <a
+      style="outline: none"
+      href="/course/<%=course.abbreviation%>"
+      class="service-div"
+    >
+      <!-- <img src="../images/imgs/service<%-i%>.webp" class="service-img" alt="" /> -->
+      <div class="service-name-div"><%=course.abbreviation%></div>
+    </a>
+    <% var i=i+1; %> <% } %>
+  </div>
+</div>

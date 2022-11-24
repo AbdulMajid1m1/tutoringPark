@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%let x=Math.floor(Math.random() * 6)+1;%>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="" />
+    <meta name="author" content="Tutoringpark" />
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+    <meta property="og:site_name" content="tutoringpark" />
+    <!-- website name -->
+    <meta property="og:site" content="tutoringpark.com" />
+    <!-- website link -->
+    <meta property="og:title" content="<%= course.name %>" />
+    <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="<%=course.subTitle%>" />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="../images/imgs/img_ (<%=x%>).png" />
+    <!-- image link, make sure it's jpg -->
+    <meta
+      property="og:url"
+      content="www.tutoringpark.com/course/<%= course.abbreviation %>"
+    />
+    <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>
+      Tutoring Park | <%= course.abbreviation %> | The course descriptions
+    </title>
+
+    <!-- Styles -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Cherry+Swash:wght@700&family=Fahkwang:wght@200&family=Marvel:wght@700&family=Rubik+Wet+Paint&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Cherry+Swash:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/fontawesome-all.css" rel="stylesheet" />
+    <link href="../css/swiper.css" rel="stylesheet" />
+    <link href="../css/magnific-popup.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+
+    <!-- Favicon  -->
+    <link rel="icon" href="../images/icons/new_logo_small.png" />
+  </head>
+
+  <body data-spy="scroll" data-target=".fixed-top">
+    <!-- Preloader -->
+    <%-include('../partials/splash')%>
+
+    <!-- end of preloader -->
+
+    <!-- Navigation -->
+    <%- include('../partials/navigationBar',{courses:courses}) %>
+    <%-include("../partials/TutorRegisterationForm")%>
+
+
+    <!-- end of navbar -->
+    <!-- end of navigation -->
+
+    <!-- Header -->
+    <header id="header" class="header" style="background: #1da1f2">
+      <div class="header-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-xl-6 d-flex justify-content-left">
+              <div class="text-container">
+                <h1
+                  style="font-family: 'Cherry Swash', cursive; font-size: 2rem"
+                >
+                  <%= course.name %>
+                </h1>
+                <div style="height: 3rem"></div>
+                <a class="btn-solid-lg page-scroll" href="#message"
+                  >Contact Us</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-5 col-xl-5">
+              <div class="image-container">
+                <div
+                  style="
+                    box-shadow: 4px 9px 15px rgba(51, 51, 51, 0.897);
+                    width: 100%;
+                    height: 15rem;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 1rem;
+                    background-image: url('../images/imgs/img_ (<%=x%>).png');
+                  "
+                ></div>
+              </div>
+            </div>
+            <!-- end of col -->
+          </div>
+          <!-- end of row -->
+        </div>
+        <!-- end of container -->
+      </div>
+      <!-- end of header-content -->
+    </header>
+    <!-- end of header -->
+
+    <!-- Header -->
+    <!-- <header id="header" class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="font-family: 'Cherry Swash', cursive;"><%= course.name %></h1>
+                
+            </div>
+        </div>
+    </div>
+</header> -->
+    <!-- end of header -->
+
+    <!-- Breadcrumbs -->
+    <div class="ex-basic-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="breadcrumbs">
+              <a href="/">Home</a><i class="fa fa-angle-double-right"></i
+              ><span><%= course.abbreviation %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of breadcrumbs -->
+
+    <!-- Details -->
+    <div id="discriptions" class="basic-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="text-container">
+              <h2 class="decoration-heading">Descriptions</h2>
+              <p><%=course.subTitle%></p>
+              <ul class="list-unstyled li-space-lg">
+                <li class="media">
+                  <i class="fas fa-square"></i>
+                  <div class="media-body">
+                    Choose when, where, and how you meet.
+                  </div>
+                </li>
+                <li class="media">
+                  <i class="fas fa-square"></i>
+                  <div class="media-body">
+                    Experience cutting-edge technology that’s better than
+                    meeting in person.
+                  </div>
+                </li>
+
+                <li class="media">
+                  <i class="fas fa-square"></i>
+                  <div class="media-body">
+                    Access the world’s best tutors no matter where you live.
+                  </div>
+                </li>
+
+                <li class="media">
+                  <i class="fas fa-square"></i>
+                  <div class="media-body">
+                    Work in comfort right from your home, boarding school, or
+                    favorite study spot.
+                  </div>
+                </li>
+              </ul>
+              <a class="btn-solid-reg page-scroll" href="#message"
+                >Message us for help</a
+              >
+            </div>
+            <!-- end of text-container -->
+          </div>
+          <!-- end of col -->
+          <div class="col-lg-6">
+            <img
+              class="img-shadow"
+              src="../../images/imgs/img_ (16).png"
+              width="100%"
+              alt="alternative"
+            />
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of basic-1 -->
+    <!-- end of details -->
+
+    <!-- Pricing -->
+    <div id="pricing" class="cards-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="h2-heading decoration-heading">
+              How much does Tutoring Park cost?
+            </h2>
+            <p class="pricing-paragraph">
+              Our online <%=course.abbreviation %> tutoring is starting from
+              $<%=course.price%> per hour and includes:<br />
+            </p>
+            <ul class="pricing-ul">
+              <li class="pricing-li">
+                one-on-one, live instruction with your expert tutor
+              </li>
+              <li class="pricing-li">full-length practice tests</li>
+              <li class="pricing-li">in-depth score reports</li>
+              <li class="pricing-li">detailed lesson notes and homework</li>
+              <li class="pricing-li">
+                a dedicated program manager to oversee your program
+              </li>
+            </ul>
+            <p class="pricing-paragraph">
+              Families can choose to pay after each tutoring session or pay in
+              advance. Have you any question?
+            </p>
+            <div class="button-wrapper">
+              <a class="btn-solid-reg page-scroll" href="#message"
+                >Send us a message</a
+              >
+            </div>
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+    </div>
+
+    <div style="height: 10rem"></div>
+
+    <div id="message">
+      <%- include("../partials/contactUs",{messages:messages})%>
+    </div>
+
+    <!-- Breadcrumbs -->
+    <div class="ex-basic-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="breadcrumbs">
+              <a href="/">Home</a><i class="fa fa-angle-double-right"></i
+              ><span><%= course.abbreviation %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of breadcrumbs -->
+
+    <!-- Empty Space -->
+    <div style="height: 10rem"></div>
+    <!-- Empty Space End-->
+
+    <%- include("../partials/footer") %>
+
+    <!-- Scripts -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Popper tooltip library for Bootstrap -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Bootstrap framework -->
+    <script src="../js/jquery.easing.min.js"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="../js/swiper.min.js"></script>
+    <!-- Swiper for image and text sliders -->
+    <script src="../js/jquery.magnific-popup.js"></script>
+    <!-- Magnific Popup for lightboxes -->
+    <script src="../js/validator.min.js"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="../js/scripts.js"></script>
+    <!-- Custom scripts -->
+  </body>
+</html>

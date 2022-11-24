@@ -1,0 +1,188 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link
+  href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<header id="header" class="ex-2-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="homepage-heading" style="margin-bottom: 50px;">Ready to start?</h1>
+
+        <!-- Sign Up Form -->
+        <div class="form-container">
+          <form data-toggle="validator" action="send" method="POST">
+            <div class="form-group text-left">
+              <label class="form-label" for="sname">Name*</label>
+              <input
+                type="text"
+                class="form-control-input"
+                id="name"
+                name="name"
+                required
+              />
+
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group text-left">
+              <label class="form-label" for="semail">Email*</label>
+              <input
+                type="email"
+                class="form-control-input"
+                id="email"
+                name="email"
+                required
+              />
+
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <!-- <div class="form-group text-left">
+                                <label class="form-label" for="phone">WhatsApp Number*</label>
+                                <input type="phoneNumber" class="form-control-input" id="phone" name="phone" required>
+
+                                <div class="help-block with-errors"></div>
+                            </div> -->
+
+            <div class="form-group text-left">
+              <label class="form-label" for="im">I am a _____*</label>
+              <select class="form-control-select" name="im">
+                <option>Parent/Guardian</option>
+                <option>Student</option>
+                <option>Tutor</option>
+                <option>Independent Educational Consultant</option>
+                <option>School Counselor</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <!-- <div class="form-group text-left">
+              <label class="form-label" for="heard"
+                >How you heard about TutoringPark</label
+              >
+              <select class="form-control-select" name="heard">
+                <option>Ads</option>
+                <option>Found In Google Search</option>
+                <option>Refer by Friend</option>
+                <option>Refer by School</option>
+                <option>Other</option>
+              </select>
+            </div> -->
+
+            <div class="form-group text-left">
+              <label class="form-label" for="country">Country*</label>
+              <div>
+                <select
+                  id="country"
+                  name="country"
+                  style="width: 100%; padding: 1rem !important"
+                >
+                  <option value="---">---</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group text-left">
+              <!--<div id="aaa"></div>-->
+              <label class="form-label" for="city">City*</label>
+              <input
+                type="text"
+                class="form-control-input"
+                id="city"
+                name="city"
+                required
+              />
+            </div>
+            <div class="form-group text-left">
+              <!--<div id="aaa"></div>-->
+              <label class="form-label" for="grade">Grade/level of Student*</label>
+              <input
+                type="text"
+                class="form-control-input"
+                id="grade"
+                name="grade"
+                required
+              />
+            </div>
+            <div class="form-group text-left">
+              <!--<div id="aaa"></div>-->
+              <label class="form-label" for="subject">List of Subject*</label>
+              <input
+                type="text"
+                class="form-control-input"
+                id="subject"
+                name="subject"
+                required
+              />
+            </div>
+
+            <div class="form-group text-left">
+              <label class="form-label" for="phone">Whatsapp*</label>
+              <table style="width: 100%">
+                <tr>
+                  <td style="width: 30%">
+                    <select
+                      class="form-control-select"
+                      style="min-width: 140px"
+                      id="code"
+                      name="code"
+                    >
+                      <option>---</option>
+                    </select>
+                  </td>
+                  <td style="width: 70%">
+                    <input
+                      type="phone"
+                      class="form-control-input"
+                      id="phone"
+                      name="phone"
+                      required
+                    />
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="form-group">
+              <textarea
+                class="form-control-textarea"
+                name="message"
+                rows="9"
+                placeholder="Message"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="submit"
+                value="Submit"
+                class="form-control-submit-button"
+              />
+            </div>
+            <div class="form-message">
+              <% var message=(messages.info)??" "; %>
+
+              <p><%= message %></p>
+            </div>
+          </form>
+        </div>
+        <!-- end of form container -->
+        <!-- end of sign up form -->
+      </div>
+      <!-- end of col -->
+    </div>
+    <!-- end of row -->
+  </div>
+  <!-- end of container -->
+  <div style="height: 10rem"></div>
+</header>
+<!-- end of ex-header -->
+<!-- end of header -->
+
+<script src="../js/countries.js"></script>
+<script>
+  $("#country").select2({ width: "100%" });
+  $("#code").select2({ width: "100%" });
+</script>
